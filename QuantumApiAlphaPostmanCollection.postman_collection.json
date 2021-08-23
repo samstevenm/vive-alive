@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "1a9f2ca6-7156-43ef-88a2-9fa7431b2ff7",
+		"name": "QuantumApiAlphaPostmanCollection",
+		"description": "This Postman collection will be used to keep the collection of API requests that are documented/supported for Quantum API Partner's.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "System Ping",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{Device_Key}}",
+						"type": "text"
+					},
+					{
+						"key": "apikey",
+						"value": "{{Api_Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"CommuniqueType\":\"ReadRequest\",\"Header\":{\"Url\":\"/server/status/ping\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Api_Url}}",
+					"host": [
+						"{{Api_Url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Root Area",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{Device_Key}}",
+						"type": "text"
+					},
+					{
+						"key": "apikey",
+						"value": "{{Api_Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"CommuniqueType\":\"ReadRequest\",\"Header\":{\"Url\":\"/area/rootarea\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Api_Url}}",
+					"host": [
+						"{{Api_Url}}"
+					]
+				},
+				"description": "API request to get the root area from a Quantum system"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Area Definition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{Device_Key}}",
+						"type": "text"
+					},
+					{
+						"key": "apikey",
+						"value": "{{Api_Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"CommuniqueType\":\"ReadRequest\",\"Header\":{\"Url\":\"{{Area_Href}}\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Api_Url}}",
+					"host": [
+						"{{Api_Url}}"
+					]
+				},
+				"description": "Request to a featch an area definition from the system."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Area Status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{Device_Key}}",
+						"type": "text"
+					},
+					{
+						"key": "apikey",
+						"value": "{{Api_Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"CommuniqueType\":\"ReadRequest\",\"Header\":{\"Url\":\"{{Area_Href}}/status\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Api_Url}}",
+					"host": [
+						"{{Api_Url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Zone Definition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{Device_Key}}",
+						"type": "text"
+					},
+					{
+						"key": "apikey",
+						"value": "{{Api_Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"CommuniqueType\":\"ReadRequest\",\"Header\":{\"Url\":\"{{Zone_Href}}\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Api_Url}}",
+					"host": [
+						"{{Api_Url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Zone Status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{Device_Key}}",
+						"type": "text"
+					},
+					{
+						"key": "apikey",
+						"value": "{{Api_Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"CommuniqueType\":\"ReadRequest\",\"Header\":{\"Url\":\"{{Zone_Href}}/status\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Api_Url}}",
+					"host": [
+						"{{Api_Url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "fcee0c07-597e-48fa-9829-70bd0360c502",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8709bae7-a133-4fef-b6d1-97beff6ef61c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "576a8a81-35fe-472a-b51b-a7b28f09f630",
+			"key": "Api_Url",
+			"value": ""
+		},
+		{
+			"id": "8f22d6ef-c1b6-47b1-95c1-3be6d9345f9f",
+			"key": "Device_Key",
+			"value": ""
+		},
+		{
+			"id": "d7d67005-a77a-4351-a539-042cba75fe88",
+			"key": "Api_Key",
+			"value": ""
+		},
+		{
+			"id": "09ec11fd-0f02-40ed-a72c-59eb3c262cc1",
+			"key": "Area_Href",
+			"value": ""
+		},
+		{
+			"id": "a16952e7-2daa-4cc0-b342-4efc51c06290",
+			"key": "Zone_Href",
+			"value": ""
+		}
+	],
+	"protocolProfileBehavior": {}
+}
